@@ -540,3 +540,220 @@ h3 {
     transform: translate(-50%, 0) scale(1); /* grows from center */
     opacity: 1;
 }
+
+
+
+
+.arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Arrow base */
+.arrow {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    transition: all 0.3s ease;
+}
+
+/* Arrow head */
+.arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+/* 🔥 Hover animation */
+.arrow-btn:hover .arrow {
+    transform: translateX(6px);
+}
+
+.arrow-btn:hover {
+    gap: 15px;
+    letter-spacing: 0.5px;
+}
+
+
+.arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000;
+    overflow: hidden;
+}
+
+/* container for arrows */
+.arrow-wrap {
+    position: relative;
+    width: 24px;
+    height: 10px;
+    overflow: hidden;
+}
+
+/* base arrow */
+.arrow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+}
+
+/* arrow head */
+.arrow::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -4px;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(45deg);
+}
+
+/* second arrow starts hidden (left side) */
+.arrow-2 {
+    left: -25px;
+    opacity: 0;
+}
+
+/* 🔥 HOVER EFFECT */
+.arrow-btn:hover .arrow-1 {
+    transform: translate(25px, -50%);
+    opacity: 0;
+}
+
+.arrow-btn:hover .arrow-2 {
+    transform: translate(25px, -50%);
+    opacity: 1;
+}
+
+/* optional text movement */
+.arrow-btn:hover {
+    gap: 14px;
+}
+
+
+
+
+
+.arrow-wrapper {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon-arrow {
+    display: block;
+    width: 40px;   /* 👈 adjust to your original size */
+    height: auto;
+}
+
+.arrow-main,
+.arrow-second {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arrow-main {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.arrow-second {
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.widget:hover .arrow-main {
+    transform: translateX(15px);
+    opacity: 0;
+}
+
+.widget:hover .arrow-second {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+:root {
+    --ease-premium: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Wrapper */
+.arrow-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* SVG size (keep consistent) */
+.icon-arrow {
+    width: 40px; /* adjust if needed */
+    height: auto;
+    display: block;
+}
+
+/* Position both arrows */
+.arrow-main,
+.arrow-second {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* MAIN arrow (exit) */
+.arrow-main {
+    opacity: 1;
+    transform: translateX(0);
+    transition:
+        transform 0.45s var(--ease-premium),
+        opacity 0.25s ease,
+        filter 0.3s ease;
+}
+
+/* SECOND arrow (enter) */
+.arrow-second {
+    opacity: 0;
+    transform: translateX(-18px);
+    transition:
+        transform 0.45s var(--ease-premium),
+        opacity 0.3s ease;
+
+    transition-delay: 0.08s; /* stagger delay */
+}
+
+/* Hover animation */
+.widget:hover .arrow-main {
+    transform: translateX(22px);
+    opacity: 0;
+    filter: blur(1.5px); /* micro trail */
+}
+
+.widget:hover .arrow-second {
+    transform: translateX(0);
+    opacity: 1;
+}
