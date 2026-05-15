@@ -1,0 +1,54 @@
+/* =========================
+   ICON BASE
+========================= */
+
+.icon-sm {
+    width: 18px;
+    height: 18px;
+}
+
+.icon-md {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-lg {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-xl {
+    width: 50px;
+    height: 50px;
+}
+
+/* =========================
+   SVG DEFAULT
+========================= */
+
+.svg-icon {
+    display: block;
+
+    transition:
+        fill 0.3s ease,
+        stroke 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* =========================
+   ICON WRAPPERS
+========================= */
+
+.icon-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================
+   HOVER EFFECTS
+========================= */
+
+.icon-hover:hover {
+    transform: scale(1.05);
+}

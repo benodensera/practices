@@ -1,0 +1,52 @@
+/* =========================
+   CONTAINERS
+========================= */
+
+.section-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* =========================
+   SECTION SPACING
+========================= */
+
+.section-padding {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+/* =========================
+   FLEX UTILITIES
+========================= */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   GRID UTILITIES
+========================= */
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
